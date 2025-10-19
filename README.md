@@ -23,7 +23,7 @@ You will simulate and analyze the electrical behavior of devices such as **NMOS*
   ngspice -v
 
   ```
-  ![ngspice](./assets/ng%20spice%20install.png)
+  ![ngspice](./Images/ng%20spice%20install.png)
   ---
 ## How to write ngspice code?
 
@@ -209,8 +209,8 @@ plot -i(Vds)
 
 ---
 
-![task1](./assets/Screenshot%202025-10-19%20190115.png)
-![task1-2](./assets/task1%20vdd.png)
+![task1](./Images/Screenshot%202025-10-19%20192957.png)
+![task1-2](./Images/task1%20vdd.png)
 
 ---
 
@@ -300,7 +300,7 @@ setplot dc1
 
 ```
 
-![IdvsVds](./assets/day2.png)
+![IdvsVds](./Images/day2.png)
 
 ---
 
@@ -327,7 +327,7 @@ setplot dc1
 .end
 
 ```
-![IdvsVds](./assets/day2.1.png)
+![IdvsVds](./Images/day2.1.png)
 
 ---
 
@@ -419,7 +419,7 @@ Vin in 0 0
 
 ---
 
-![TASK3](./assets/day3.png)
+![TASK3](./Images/day3.png)
 
 ---
 
@@ -482,7 +482,7 @@ plot v(in) v(out)
 
 ```
 ---
-![result](./assets/day3%20trans.png)
+![result](./Images/day3%20trans.png)
 
 ---
 
@@ -559,9 +559,7 @@ NML = VIL − VOL ← Maximum tolerable noise for logic LOW
 ---
 
 
-### 🌩️ Noise Scenarios: Will It Survive?
-
-![Noise Bump Scenarios](Images/Task5_3.png)  
+### 🌩️ Noise Scenarios: Will It Survive? 
 
 | Case | Input + Noise | Perceived Level | Result |
 |------|---------------|----------------|--------|
@@ -627,7 +625,7 @@ Vin in 0 1.8V
 
 ---
 
-![result](./assets/day4.png)
+![result](./Images/day4.png)
 
 ---
 
@@ -683,7 +681,7 @@ Sweep VDD from 1.8V → 0.8V, observe behavior under voltage starvation.
 **Experiment B:** Device Sizing
 Adjust PMOS/NMOS widths to see how pull-up/pull-down balance affects Vm and noise margins.
 
-![result](./assets/day4.1.png)
+![result](./Images/day4.1.png)
 
 📉 Vm shifts downward as VDD decreases
 
@@ -693,7 +691,7 @@ Adjust PMOS/NMOS widths to see how pull-up/pull-down balance affects Vm and nois
 
 ---
 
-![result](./assets/day5.png)
+![result](./Images/day5.png)
 
 💪 Wider PMOS → Vm shifts up, NM_H improves
 
