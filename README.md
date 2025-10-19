@@ -6,13 +6,13 @@ You will simulate and analyze the electrical behavior of devices such as **NMOS*
 
 ---
 
-# ⚡What is Circuit Design?
+## ⚡What is Circuit Design?
  Gates made up of pmos and nmos transistors arranged in a particualr fashion and perform required functionality...
 
- # 🎯Why SPICE ?
+ ## 🎯Why SPICE ?
  To find output characterstics we need to do simulation and also it help in calculation delay which furthermore give information about W/L ratios. To change delay we need to change W/L ratio and that can only be obtained by SPICE simulation...
 
- ## Installation of ngSpice
+ ## Installation of ngspice
   
   ngspice is a open source simulator used for circuits..
 
@@ -27,7 +27,7 @@ You will simulate and analyze the electrical behavior of devices such as **NMOS*
   ---
 ## How to write ngspice code?
 
-# ⚙️ Step 1: Identify Circuit Components
+## ⚙️ Step 1: Identify Circuit Components
 
 Before creating the simulation file, clearly identify all elements in your design.
 
@@ -42,7 +42,7 @@ Before creating the simulation file, clearly identify all elements in your desig
 VDD, Vin, out, NMOS, PMOS
 
 ---
-# 📝 Step 2: Create the Netlist File
+## 📝 Step 2: Create the Netlist File
 
 Ngspice reads circuit descriptions written in **SPICE netlist format**.
 
@@ -52,7 +52,7 @@ Ngspice reads circuit descriptions written in **SPICE netlist format**.
 
 ---
 
-# 🔌 Step 3: Define Voltage Sources
+## 🔌 Step 3: Define Voltage Sources
 
 ```spice
 VDD Vdd 0 DC 5
@@ -65,7 +65,7 @@ Vin in 0 PULSE(0 5 0 1n 1n 10n 20n)
 | **Vin** | in → 0           | Pulse signal for switching (0 V → 5 V) |
 
 ---
-# Step 4: Define Devices and Load
+## Step 4: Define Devices and Load
 
 ```
 M1 out in 0 0 NMOS L=1u W=10u
@@ -83,7 +83,7 @@ Cload out 0 1p
 
 ---
 
-# 🧠 Step 5: Add Control Commands
+## 🧠 Step 5: Add Control Commands
 ```
 .control
 run
@@ -99,7 +99,7 @@ plot v(in) v(out)
 
 ---
 
-# ▶️ Step 6: Run the Simulation
+## ▶️ Step 6: Run the Simulation
 
 Save the file as inverter.spice..Open the terminal and run
 
@@ -108,7 +108,7 @@ ngspice inverter.spice
 ```
 ---
 
-# 📊 Step 7: Analyze Results
+## 📊 Step 7: Analyze Results
 
 | Observation            | Expected Behavior                                     |
 | ---------------------- | ----------------------------------------------------- |
@@ -120,7 +120,7 @@ ngspice inverter.spice
 ---
 
 
-# ⚡ Task 1 – NMOS Id–Vds Characteristics
+## ⚡ Task 1 – NMOS Id–Vds Characteristics
 
 ## 🎯 Objective
 To simulate and analyze the **Id–Vds characteristics of an NMOS transistor** using the **SkyWater 130nm PDK** in **Ngspice**.  
@@ -157,7 +157,7 @@ Understanding this curve means understanding how transistors *think*.
 
 ---
 
-# SPICE NETLIST
+## SPICE NETLIST
 
 ```
 * NMOS Id-Vds Characteristics
@@ -186,7 +186,9 @@ Vin in 0 1.8
 Save the file as nmos_idvds.spice
 Run the simulation:
 
-```ngspice nmos_idvds.spice
+```
+ngspice nmos_idvds.spice
+
 ```
 **Inside Ngspice, plot the drain current:**
 
@@ -423,7 +425,7 @@ Vin in 0 0
 
 ---
 
-**Transient Response**
+### Transient Response
 
 # Inverter Switching Analysis
 
@@ -481,7 +483,6 @@ plot v(in) v(out)
 .end
 
 ```
----
 ![result](./Images/day3%20trans.png)
 
 ---
